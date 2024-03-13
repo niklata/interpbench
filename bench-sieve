@@ -1,0 +1,15 @@
+#!/bin/sh
+
+echo "bash:" && time ./sieve.bash 1&> /dev/null
+echo "fennel:" && time ./sieve-fnl.lua 1&> /dev/null
+echo "gawk:" && time ./sieve.gawk 1&> /dev/null
+echo "janet:" && time ./sieve.janet 1&> /dev/null
+echo "quickjs:" && time ./sieve.js 1&> /dev/null
+echo "ksh93:" && time ./sieve.ksh 1&> /dev/null
+echo "lua54:" && time ./sieve.lua 1&> /dev/null
+echo "mawk:" && time ./sieve.mawk 1&> /dev/null
+echo "perl5:" && time ./sieve.pl 1&> /dev/null
+echo "python3:" && time ./sieve.py 1&> /dev/null
+echo "tcl:" && time ./sieve.tcl 1&> /dev/null
+echo "txr-lisp:" && time ./sieve.tl 1&> /dev/null
+echo "zsh:" && time ./sieve.zsh 1&> /dev/null
