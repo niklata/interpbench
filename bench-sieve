@@ -1,4 +1,6 @@
 #!/bin/sh
 
 # ./sieve.tl
+pushd sieve || exit 1
 hyperfine ./sieve.lua ./sieve-fnl.lua ./sieve.janet ./sieve.js ./sieve.mawk ./sieve.py ./sieve.pl ./sieve.gawk ./sieve.tcl ./sieve.ksh ./sieve.zsh ./sieve.bash
+popd

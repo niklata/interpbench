@@ -4,8 +4,8 @@ function sieve_sundaram(n)
     let a = {};
     let s = [2];
     let m = n / 2;
-    for (let i = 1; i <= n; ++i) {
-        for (let j = i; j <= n; ++j) {
+    for (let i = 1; i < n; ++i) {
+        for (let j = i; j < n; ++j) {
             let p = i + j + 2*i*j;
             if (p <= n) a[p] = true;
         }

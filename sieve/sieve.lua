@@ -1,5 +1,5 @@
 #!/usr/bin/env lua5.4
-function sieve_sundaram(n)
+local function sieve_sundaram(n)
    local a = {}
    local s = {2}
    local m = n/2
@@ -23,7 +23,7 @@ end
 
 local t = sieve_sundaram(1000)
 local ts = ""
-for k,v in pairs(t) do
+for _,v in ipairs(t) do
    ts = ts .. v .. " "
 end
 print(ts)
