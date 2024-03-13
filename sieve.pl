@@ -1,7 +1,4 @@
 #!/usr/bin/env perl
-use strict;
-use warnings;
-use v5.32;
 sub sieve_sundaram {
     my $n = shift;
     my %a;
@@ -10,21 +7,16 @@ sub sieve_sundaram {
     foreach my $i (1..($n-1)) {
         foreach my $j ($i..($n-1)) {
             my $p = $i + $j + 2 * $i * $j;
-            if ($p <= $n) {
-                $a{$p} = 1
-            }
+            $a{$p} = 1 if ($p <= $n)
         }
     }
     foreach my $k (1..$m) {
-        if (!$a{$k}) {
-            push(@s, (2 * $k + 1))
-        }
+        push(@s, (2 * $k + 1)) if (!$a{$k})
     }
     return @s;
 }
 
-my @t = sieve_sundaram(1000);
-foreach my $i (@t) {
+foreach my $i (sieve_sundaram(1000)) {
     printf("%d ", $i);
 }
-printf("\n");
+print("\n");
