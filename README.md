@@ -24,7 +24,7 @@ This is a test of numerics, loops, hash table lookup and set, and array append.
 * Janet       - 0.013s
 * QuickJS     - 0.017s
 * mawk        - 0.024s
-* Python3     - 0.034s
+* Python3     - 0.035s
 * Perl        - 0.036s
 * gawk        - 0.043s
 * Tcl         - 0.048s
