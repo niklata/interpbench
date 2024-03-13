@@ -2,17 +2,35 @@
 
 ## Introduction
 
-This is meant as a simple benchmark of dynamic language performance.  I'm focusing mostly on embeddable or shell-script languages.  If a language has a JIT or AOT compiler that generates machine code, it's not in context for these tests.
+This is meant as a simple benchmark of dynamic language runtime performance.  I'm focusing mostly on embeddable or shell-script languages.  If a language runtime has a JIT or AOT compiler that generates machine code, it's not in context for these tests.
 
-Since the focus here is on scripting, either at the shell, or as embedded languages, interpreter startup time is important.
+Since the focus here is on scripting, either at the shell, or as embedded languages, startup time is important.
 
 I'm going for approximate numbers.  CPU clock scaling is still enabled.
 This level of precision is good enough to distinguish the general performance groupings.
 
+## Language versions
+
+Everything runs on amd64.
+
+Lua 5.4.6
+Fennel 1.4.0 on PUC Lua 5.4
+QuickJS-ng version 0.4.0dev
+Python 3.11.8
+Perl v5.38.2
+GNU Awk 5.3.0
+mawk 1.3.4 20231126
+Janet 1.33.0-03ae2ec1
+Tcl 8.6.13
+zsh 5.9
+GNU bash, version 5.1.16(1)-release
+ksh 93u+m/1.0.8 2024-01-01
+dash 0.5.12
+
 ## Missing languages
 
-* sh (dash) - Possible to do via eval trickery to simulate associative arrays.
-* ruby - Just haven't gotten to it yet; it doesn't embed that well, but since I wrote perl and shell script tests...
+* dash (sieve) - Possible to do via eval trickery to simulate associative arrays.
+* ruby - Just haven't gotten to it yet.
 * mruby - It's intended for embedding, so it's in scope.
 * elisp - Would be fun, but would bend the rules since it's now JIT compiled.
 
@@ -84,7 +102,8 @@ Summary
 
 ## Startup performance
 
-Time to start, print "Hello world", and exit.
+Time to start, print "Hello world", and exit.  Measures the fixed cost of
+starting up the language runtime.
 
 Benchmark 1: ./hello.mawk
   Time (mean ± σ):       0.4 ms ±   0.1 ms    [User: 0.3 ms, System: 0.1 ms]
