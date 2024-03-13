@@ -1,0 +1,5 @@
+#!/bin/sh
+
+pushd fib || exit 1
+hyperfine -N ./fib.mawk ./fib.lua ./fib-fnl.lua ./fib.js ./fib.gawk ./fib.pl ./fib.janet ./fib.tcl ./fib.py ./fib.ksh ./fib.dash ./fib.zsh ./fib.bash
+popd
