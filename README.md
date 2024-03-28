@@ -37,7 +37,7 @@ dash 0.5.12
 ## Sieve performance
 
 This is a test of numerics, loops, hash table lookup and set, and array append.
-
+```
 Benchmark 1: ./sieve.lua
   Time (mean ± σ):       6.1 ms ±   0.2 ms    [User: 5.6 ms, System: 0.5 ms]
   Range (min … max):     5.7 ms …   7.9 ms    467 runs
@@ -99,12 +99,12 @@ Summary
   125.26 ± 3.72 times faster than './sieve.ksh'
   174.28 ± 4.99 times faster than './sieve.zsh'
   291.36 ± 8.87 times faster than './sieve.bash'
-
+```
 ## Startup performance
 
 Time to start, print "Hello world", and exit.  Measures the fixed cost of
 starting up the language runtime.
-
+```
 Benchmark 1: ./hello.mawk
   Time (mean ± σ):       0.4 ms ±   0.1 ms    [User: 0.3 ms, System: 0.1 ms]
   Range (min … max):     0.3 ms …   0.9 ms    5774 runs
@@ -166,11 +166,11 @@ Summary
     3.36 ± 0.52 times faster than './hello.tcl'
     4.05 ± 0.60 times faster than './hello.janet'
    16.56 ± 2.21 times faster than './hello.py'
-
+```
 ## Fibonacci performance
 
 Tests function call speed.
-
+```
 Benchmark 1: ./fib.mawk
   Time (mean ± σ):       0.6 ms ±   0.1 ms    [User: 0.4 ms, System: 0.2 ms]
   Range (min … max):     0.5 ms …   1.0 ms    3794 runs
@@ -237,3 +237,4 @@ Summary
  1873.78 ± 241.05 times faster than './fib.dash'
  3501.09 ± 449.06 times faster than './fib.zsh'
  3698.01 ± 476.31 times faster than './fib.bash'
+```
