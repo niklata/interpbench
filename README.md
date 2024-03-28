@@ -12,7 +12,7 @@ This level of precision is good enough to distinguish the general performance gr
 ## Language versions
 
 Everything runs on amd64.
-
+```
 Lua 5.4.6
 Fennel 1.4.0 on PUC Lua 5.4
 QuickJS-ng version 0.4.0dev
@@ -26,7 +26,7 @@ zsh 5.9
 GNU bash, version 5.1.16(1)-release
 ksh 93u+m/1.0.8 2024-01-01
 dash 0.5.12
-
+```
 ## Missing languages
 
 * dash (sieve) - Possible to do via eval trickery to simulate associative arrays.
