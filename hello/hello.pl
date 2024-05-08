@@ -1,5 +1,3 @@
 #!/usr/bin/env perl
-
-use v5.34;
-say "Hello, world!"
+print "Hello, world!\n"
 
